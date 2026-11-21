@@ -1,0 +1,1 @@
+KILLA FITNESS v4.3 full replacement. Extract and upload the CONTENTS, preserving folders. Existing local workout data uses killa-fitness-v4 storage key and is not reset. Test logging, rest alarm, save and resume on device. Previous workout example figures in design concept are not sample data in the app.\n
