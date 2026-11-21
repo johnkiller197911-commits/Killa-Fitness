@@ -1,6 +1,6 @@
 {
-  "name": "KILLA FITNESS V6 Alpha Preview",
-  "short_name": "KILLA V6 Alpha",
+  "name": "KILLA FITNESS V6.1 Titanium X",
+  "short_name": "KILLA FITNESS",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
@@ -26,7 +26,7 @@
       "purpose": "maskable"
     }
   ],
-  "id": "./v6-alpha-preview",
+  "id": "./",
   "description": "KILLA FITNESS \u2014 metallic green workout tracker, exercise library, and training progress.",
   "display_override": [
     "standalone",

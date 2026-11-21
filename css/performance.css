@@ -69,3 +69,12 @@
 .generator-preview{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,185px),1fr));gap:12px;margin:12px 0 20px}.generator-exercise{min-width:0;overflow:hidden;border:1px solid #435549;border-radius:14px;background:linear-gradient(140deg,#202b2a,#0a0f10);box-shadow:inset 0 1px #ffffff19}.generator-exercise .exercise-img{width:100%;height:150px;object-fit:contain;display:block;background:#0a0e0d}.generator-exercise>div:last-child{padding:12px}.generator-exercise strong{display:block;line-height:1.3}.generator-exercise small{display:block;color:#b5c3b8;margin-top:5px}.exercise-image-error{padding:18px;background:#17211c;border:1px dashed #77836e;color:#e5eddf;border-radius:10px;min-height:110px;display:grid;place-items:center;text-align:center}@media(max-width:430px){.generator-preview{grid-template-columns:repeat(2,minmax(0,1fr))}.generator-exercise .exercise-img{height:125px}}
 
 .preview-banner{padding:11px 14px;margin:0 0 16px;border:1px solid #b6f43288;border-radius:12px;background:linear-gradient(110deg,#24321c,#111a16);color:#d8f4a7;font-size:12px;font-weight:800;line-height:1.5}.battle-status{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:10px 12px;margin:12px 0;border:1px solid #55734d;border-radius:12px;background:linear-gradient(90deg,#1b2a1c,#101916);color:#b6f432;font-size:11px;font-weight:850}button{touch-action:manipulation}@media(max-width:700px){.workout-actions button{min-height:58px}.rest-presets button{min-height:44px}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* V6.1 Rest cockpit — compact readable timer, no duplicate floating alarm in Battle */
+.rest-ring{position:relative;min-width:0;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px}
+.rest-ring strong{display:block;font-size:clamp(30px,8vw,54px)!important;line-height:1.05!important;letter-spacing:-.045em;white-space:nowrap;text-align:center;max-width:100%}
+.rest-state-label{font-size:clamp(9px,2.2vw,12px);font-weight:800;letter-spacing:.055em;text-align:center;color:#b6f432;max-width:100%;padding:0 5px}
+.rest-actions button{min-height:48px;touch-action:manipulation}
+.rest-presets button{min-height:52px}
+#timer[hidden]{display:none!important}
+@media(max-width:400px){.rest-main{gap:10px}.rest-ring strong{font-size:32px!important}.rest-state-label{font-size:9px}}
