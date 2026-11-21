@@ -1,2 +1,13 @@
-KILLA FITNESS v3.2 — Full replacement
-Consolidated v3.1 baseline, updated version nameplate and offline cache. Includes all packaged images, icons and application dependencies.
+v4.1 — Metallic Branding Update
+- Approved barbell header image, centred on all Performance Edition pages.
+- Green divider, carbon-style header and metallic navigation.
+- Version updated in About; cache revision updated.
+- No workout or storage logic changed.
+
+v4.0 Performance Edition integration preview
+- New responsive home, sidebar, five-tab navigation; version in Settings.
+- Dedicated exercise logging, edit/remove sets, substitutions, resume, rest alarm, completion summary.
+- Conservative progression suggestions, muscle exposure map, analytics, program builder and FIFO calendar.
+- Migration of existing local records; photo-inclusive backup, optional authenticated manual cloud snapshots.
+- Offline core/optional asset separation; retained original v3.2 interface for fallback.
+- Limitations: automatic cloud merge, native background alarms, full legacy feature parity and device QA remain outstanding.
