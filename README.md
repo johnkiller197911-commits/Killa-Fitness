@@ -17,3 +17,7 @@ service cloud.firestore {
 Enter the project ID and Web API key in Settings. Upload/restore snapshots manually; photos are not sent to cloud. Local export includes photos. No credentials are shipped. Firestore has document size limits. Cloud operations require actual project testing.
 
 Alarm works while browser permits audio execution; not guaranteed when locked/suspended. Open app and tap a control to unlock audio. No native notification guarantee. Exercise illustrations limited to existing 12 assets. Muscle map is schematic; no physiological recovery prediction. Calendar selects appropriate program manually and shows current month. The old app retains advanced legacy generator features not yet ported. Device testing and cloud validation required before production use. To roll back, redeploy original v3.2 ZIP; v4 records are separate, export them before rollback.
+
+
+## v4.5 — Installation
+See INSTALL-ON-PHONE.txt. Install help appears in the header in normal browser mode. No data migration or reset.

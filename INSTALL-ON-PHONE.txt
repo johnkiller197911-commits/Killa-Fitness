@@ -1,0 +1,8 @@
+KILLA FITNESS v4.5
+URL: https://johnkiller197911-commits.github.io/Killa-Fitness/
+
+ANDROID: Open URL in Chrome or Samsung Internet > browser menu > Install app / Add to Home screen.
+IPHONE: Open URL in Safari > Share > Add to Home Screen > Open as Web App (if offered) > Add.
+
+Use same website origin for existing browser data. Home screen installations can have separate storage on some platforms. Export backup before first switch.
+Keep app open once online to populate offline cache. Screen wake lock and background alarms depend on device/browser policies.

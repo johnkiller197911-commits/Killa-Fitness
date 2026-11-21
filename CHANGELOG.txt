@@ -1,1 +1,13 @@
-KILLA FITNESS v4.3 — Workout Screen Edition\n\n- Rebuilt active workout screen to match approved dark metallic green mockup.\n- Compact 3D illustration with set progress beside it.\n- Prominent previous workout comparison (only real logged history).\n- Larger weight and repetitions controls with valid weight requirement.\n- Inline rest timer, pause/resume, +15 seconds, skip/dismiss.\n- Highlighted full exercise queue and active exercise.\n- Confirmation before advancing past incomplete sets.\n- Preserved exercise illustrations, program data and original storage keys.\n- Updated offline cache and About version to v4.3.\n\nNOTE: Timer alarms in the background depend on browser/Android restrictions. Test on your phone.\n
+KILLA FITNESS V5.0 TITANIUM X — PREVIEW BUILD
+Based on v4.5 installable edition.
+- New COMMAND mode Home: metallic hero, live workout launch, real weekly statistics and coach panel.
+- New KILLA COACH: effort feedback on the last logged set (Easy / Good / Hard).
+- Coaching advice uses the logged set and previous exercise history; not AI or real-time form detection.
+- New KILLA PUSH / FOCUS / QUIET preference; saved to existing v4 storage.
+- Tactile metallic navigation and responsive training controls.
+- New VICTORY mode completion styling with saved session statistics.
+- Optional haptic feedback where supported and reduced motion setting.
+- Updated PWA offline cache identifier.
+- Existing workout, rest, screen wake, photos, backup, install and training records retained.
+- No cloud AI or voice assistant in this preview.
+- Test on physical Apple and Android phones before treating this as production-ready.
