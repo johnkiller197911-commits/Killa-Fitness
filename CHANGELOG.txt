@@ -1,3 +1,11 @@
+v4.2 — Exercise illustration update
+- Added 17 generated exercise illustrations.
+- Expanded catalog to 29 entries and removed original 12-image restriction.
+- Updated offline cache.
+- Retained v4.1 branding, storage keys and workout logic.
+- Generated illustrations are visual references, not validated technique instruction.
+- Phone testing pending.
+
 v4.1 — Metallic Branding Update
 - Approved barbell header image, centred on all Performance Edition pages.
 - Green divider, carbon-style header and metallic navigation.

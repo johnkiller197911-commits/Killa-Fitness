@@ -1,3 +1,5 @@
+v4.2: Upload all extracted files and folders to the existing repository. Existing local data keys are unchanged. Close and reopen the app after deployment to activate the new service worker.
+
 # KILLA FITNESS v4.0 Performance Edition — integration preview
 Extract the ZIP and upload its contents (including folders) to the existing GitHub Pages main branch. Do not delete browser storage. Export your v3.2 backup before upgrading. New interface imports v3.2 program, history, measurements and unfinished sets on first use on the same origin. Original localStorage data is retained; the old interface is available in More and uses its separate original records. Progress photos use the original IndexedDB database. Do not use both versions for logging interchangeably.
 
