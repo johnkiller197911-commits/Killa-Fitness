@@ -1,0 +1,13 @@
+KILLA FITNESS v5.1 — TITANIUM X / FORGED NAVIGATION
+- Premium forged-metallic six-tab navigation: Home, Train, Progress, Plan, Fuel, More.
+- Lime illuminated active tab, responsive tactile press, readable icon + label, safe-area support.
+- Train active state remains highlighted in the active workout.
+- Plan opens the existing working training calendar.
+- Fuel is a new OPTIONAL manual nutrition and hydration log, saved locally.
+- Fuel entries are included in complete backup/restore and cloud snapshot JSON.
+- Existing workout state key killa-fitness-v4 and old migration remain unchanged.
+- No existing workout records are deleted.
+- Existing v5 coach, timer, 3D illustrations, wake lock and offline installation retained.
+- Visual inspiration is a concept; the delivered interface is implemented HTML/CSS/JS.
+- IMPORTANT: Test on Samsung and iPhone before treating this as production release.
+- Back up before updating. Do not clear app storage.
