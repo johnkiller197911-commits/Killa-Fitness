@@ -1,0 +1,2 @@
+KILLA FITNESS v3.2 — Full replacement
+Consolidated v3.1 baseline, updated version nameplate and offline cache. Includes all packaged images, icons and application dependencies.
