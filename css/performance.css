@@ -78,3 +78,49 @@
 .rest-presets button{min-height:52px}
 #timer[hidden]{display:none!important}
 @media(max-width:400px){.rest-main{gap:10px}.rest-ring strong{font-size:32px!important}.rest-state-label{font-size:9px}}
+
+/* V6.2 Anatomy Edition */
+.v6-progress-heading{padding:8px 0 14px}
+.v6-progress-heading small{color:#b6f432;letter-spacing:.15em;font-size:11px;font-weight:800}
+.v6-progress-heading h1{font-size:clamp(32px,7vw,50px);letter-spacing:-.035em;margin:4px 0}
+.v6-progress-heading p{color:#a9b9b0;letter-spacing:.12em;font-size:11px;font-weight:750}
+.v6-period{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin-bottom:15px}
+.v6-period button{min-width:0;padding:12px 2px;min-height:54px;font-size:clamp(11px,2.5vw,14px)}
+.v6-chart{height:220px;display:flex;align-items:stretch;gap:8px;overflow-x:auto;padding:12px 8px 24px;border-radius:14px;background:repeating-linear-gradient(to top,transparent 0,transparent calc(25% - 1px),#3d4d4359 25%),#0a1110;border:1px solid #354b39}
+.v6-chart-column{min-width:48px;flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:4px;position:relative;color:#c9d5ca;font-size:11px}
+.v6-chart-column>i{display:block;width:min(70%,60px);background:linear-gradient(90deg,#8dc51d,#c2ff3a);border:1px solid #dcff81;box-shadow:0 0 10px #b6f43255;border-radius:4px 4px 0 0}
+.v6-chart-column>small{position:absolute;top:100%;white-space:nowrap;font-size:10px}
+.v6-chart-column>span{font-size:10px}
+.v6-anatomy-section{background:linear-gradient(150deg,#19221f,#0c1211);border-color:#718c4b}
+.anatomy-layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:14px;align-items:center}
+.anatomy-visual{position:relative;min-width:0;border-radius:12px;overflow:hidden;background:#000}
+.anatomy-visual>img{display:block;width:100%;height:auto}
+.anatomy-overlay{position:absolute;inset:0;width:100%;height:100%}
+.anatomy-zone{fill:transparent;stroke:transparent;cursor:pointer;transition:fill .15s ease}
+.anatomy-zone.trained{fill:#a5ff2033;stroke:#b6f43275;stroke-width:3}
+.anatomy-zone.selected{fill:#b6f43280;stroke:#dfff80;stroke-width:5;filter:drop-shadow(0 0 9px #b6f432)}
+.anatomy-zone:focus-visible{stroke:#fff;stroke-width:7;outline:none}
+.anatomy-view-labels{position:absolute;bottom:6px;left:0;right:0;display:grid;grid-template-columns:1fr 1fr;text-align:center;color:#d1dfd5;font-size:10px;font-weight:900;letter-spacing:.12em;pointer-events:none}
+.anatomy-muscles{display:flex;flex-direction:column;gap:7px}
+.anatomy-muscle{display:grid;grid-template-columns:12px 1fr auto;align-items:center;gap:7px;min-width:0;text-align:left;padding:10px 7px 13px;position:relative;border-radius:9px;border:1px solid #4b5c50;background:#18211e;color:#e8f2e9;font-size:clamp(10px,2.4vw,13px);font-weight:650}
+.anatomy-muscle strong{color:#c2ff55;white-space:nowrap;font-size:11px}
+.anatomy-muscle.selected{border-color:#b6f432;box-shadow:inset 0 0 10px #b6f43225}
+.anatomy-muscle i{position:absolute;left:7px;right:7px;bottom:3px;height:3px;border-radius:3px;background:linear-gradient(to right,#b6f432 var(--level),#37433a var(--level))}
+.muscle-dot{width:10px;height:10px;border-radius:50%;background:#59666d}
+.muscle-dot.trained{background:#b6f432;box-shadow:0 0 7px #b6f432}
+.anatomy-note{font-size:11px;color:#a8b9a9;line-height:1.55;margin-top:12px}
+.v6-muscle-detail{margin-top:12px;padding:12px;border:1px solid #5b704d;border-radius:10px;background:#111a15}
+.v6-muscle-detail p{margin:5px 0;font-size:12px}
+@media(max-width:420px){.anatomy-layout{grid-template-columns:1fr}.anatomy-visual{max-width:440px}.anatomy-muscles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.anatomy-muscle{min-height:54px}}
+@media(prefers-reduced-motion:reduce){.anatomy-zone{transition:none}}
+
+/* V6.3 end-of-exercise decision */
+.exercise-finish-modal{text-align:center;max-width:430px;padding:10px 3px}
+.exercise-finish-modal .finish-emblem{width:76px;height:76px;display:grid;place-items:center;border-radius:50%;margin:0 auto 15px;border:2px solid #b6f432;background:linear-gradient(145deg,#344d1d,#111a13);box-shadow:0 0 28px #b6f43255;color:#b6f432;font-size:42px;font-weight:900}
+.exercise-finish-modal small{display:block;color:#b6f432;font-weight:850;letter-spacing:.1em}
+.exercise-finish-modal h2{font-size:clamp(22px,5vw,30px);margin:9px 0}
+.exercise-finish-modal p{color:#d1dcd2;line-height:1.55}
+.exercise-finish-modal>button{display:block;width:100%;min-height:57px;margin:10px 0;font-weight:850;font-size:15px}
+.exercise-finish-modal .finish-modal-note{font-size:12px;color:#aebdaf;margin-top:16px}
+#modal:has(.exercise-finish-modal){width:min(92vw,470px);max-height:90dvh;overflow-y:auto;border:1px solid #b6f432;border-radius:20px;background:linear-gradient(145deg,#1c2820,#0a1110);box-shadow:0 0 45px #000c,0 0 20px #b6f4322b;color:#f2f5ef;padding:22px}
+#modal::backdrop{background:#000c;backdrop-filter:blur(5px)}
