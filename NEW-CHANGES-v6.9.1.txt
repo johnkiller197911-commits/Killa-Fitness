@@ -1,0 +1,10 @@
+KILLA FITNESS V6.9.1 — UNIFORM COMMAND DOCK
+
+- Replaced oversized circular Train navigation control with a rectangular button matching all five other menu buttons.
+- Kept all six destinations: Home, Progress, Train, Plan, Fuel, More.
+- Only the active destination receives the bright green border and glow.
+- Preserved curved metallic dock housing, six-button order, and simplified 3D Training System online status.
+- Kept V6.8 anatomical muscle map, exercise assets, coaching, training history, and local storage schema unchanged.
+- Updated service-worker cache identifier to request refreshed CSS.
+
+Installation: back up your data; extract the ZIP and upload its CONTENTS to your GitHub repository root, preserving folders. Allow the service worker to update; close and reopen the PWA.
