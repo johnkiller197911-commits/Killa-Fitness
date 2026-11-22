@@ -8,3 +8,7 @@ KILLA FITNESS V6.9.1 — UNIFORM COMMAND DOCK
 - Updated service-worker cache identifier to request refreshed CSS.
 
 Installation: back up your data; extract the ZIP and upload its CONTENTS to your GitHub repository root, preserving folders. Allow the service worker to update; close and reopen the PWA.
+
+Version-label hotfix: corrected the About page from V6.5 to V6.9.1, updated the Command Centre label and document title. No changes to saved workout data.
+
+CORRECTION: Removed all circular Train button CSS and its special markup; six equal rectangular buttons. Bumped service worker cache to force new assets.
