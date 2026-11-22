@@ -21,3 +21,9 @@ Alarm works while browser permits audio execution; not guaranteed when locked/su
 
 ## v4.5 — Installation
 See INSTALL-ON-PHONE.txt. Install help appears in the header in normal browser mode. No data migration or reset.
+
+
+## V6.8 anatomy rebuild
+- Anatomically traced green tissue shapes, shaded from the original 3D artwork, replacing block-like colour masks.
+- Seven independently coloured muscle regions; workout history storage unchanged.
+- This is static rendered artwork with independently coloured layers, not a rotatable 3D model.
