@@ -1,0 +1,11 @@
+KILLA FITNESS V7.3.1 — RESPONSIVE CINEMATIC DASHBOARD
+
+- Removed embedded mock statistics from the athlete hero artwork.
+- Created a clean standalone bodybuilder background image.
+- Real welcome heading, six live statistic cards and navigation are separate responsive HTML elements.
+- Desktop: left navigation and three-column dashboard.
+- Mobile: existing six-button bottom navigation and two-column dashboard.
+- Adjusted hero image crop, typography, panel heights and breakpoints.
+- Kept existing workout history storage key, exercise vault and generator.
+- Updated asset cache and version references.
+- Live deployment and device testing are not included.
