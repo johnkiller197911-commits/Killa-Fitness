@@ -1,0 +1,21 @@
+KILLA FITNESS V7.1 — TITANIUM X TRAINING EDITION
+
+- Rebuilt the Smart Workout Generator with visual muscle-group tiles.
+- One focus per session: Chest, Arms, Back, Shoulders, Legs, or Core.
+- Standard, Intense, and Beast Mode selection; 30/45/60/75/90-minute sessions.
+- Reworked workout preview with exercise thumbnails, equipment, rep targets and training-method badges.
+- Exercise substitution and regeneration, with saved custom workout templates.
+- Redesigned Program Builder with muscle-group filters and mode-based starting points.
+- Existing combined programs are retained for access and backup; they are no longer the default session generator.
+- Training HQ redesign; no mining imagery or work-related buttons.
+- Six equal bottom navigation tabs: Home, Train, Programs, Progress, Fuel, More.
+- Updated displayed version, asset cache and app title.
+- Original exercise image library and local workout storage key retained.
+- Technique information available from active workout method badges.
+
+LIMITATIONS / IMPORTANT:
+- Existing exercise pictures are 3D-style illustrations, not rotatable 3D models. They have not been regenerated in this update.
+- Advanced methods currently offer exercise-level labels and guidance; full multi-exercise guided giant-set and superset logging is not yet implemented.
+- Session duration is an estimate, not a guaranteed stopwatch limit.
+- Visual styling is based on the approved mockup but not pixel-identical to a rendered concept image.
+- Back up data in Settings before replacing app files.

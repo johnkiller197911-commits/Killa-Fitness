@@ -1,0 +1,11 @@
+KILLA FITNESS V7.2 — LIVE HOME DASHBOARD
+
+- Replaced Home resume banner and duplicated navigation cards with a six-panel dashboard.
+- Welcome Back hero and metallic athlete aesthetic retained.
+- Weekly sessions, selected programme, last-trained muscle activity, weekly and 28-day training volume, coach guidance, nutrition and hydration all use existing local data.
+- Missing records display honest empty states, not invented values or recovery percentages.
+- Bottom navigation remains fixed and unchanged.
+- Workout history, exercise illustrations, programme builder, timers and existing localStorage keys unchanged.
+- Service worker cache identifier and asset versions updated.
+
+IMPORTANT: Export a backup before replacing existing files. Stats are calculated on-device from saved data. Muscle activity is not a clinical recovery measurement.
