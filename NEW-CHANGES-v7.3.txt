@@ -1,0 +1,11 @@
+KILLA FITNESS V7.3 — TITANIUM X IMMERSIVE DASHBOARD
+
+- Redesigned Home hero: integrated cinematic silver athlete and bold WELCOME BACK.
+- Removed repeated mid-screen KILLA FITNESS branding from Home.
+- Upgraded six dashboard statistic panels with responsive dark glass and neon effects.
+- Improved Samsung/mobile layout: two-column tiles; three columns on larger screens.
+- Retained all actual history-derived metrics, existing workout generator, exercise vault, six-button dock, and storage keys.
+- New offline cache identifier and asset; version labels updated.
+- Respects reduced-motion preferences.
+
+NOTE: Example statistics in the visual concept are not injected into the app. Muscle activity represents last trained dates, not a physiological recovery measurement.

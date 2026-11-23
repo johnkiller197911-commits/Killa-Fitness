@@ -231,3 +231,29 @@
 .kd-last,.kd-empty{display:flex;flex-direction:column;gap:4px;width:100%;margin-top:12px;padding:13px;text-align:left;border:1px solid #667d4e;border-radius:12px;background:#152016;color:white}.kd-last span{font-size:10px;color:#b6f432;font-weight:900}.kd-last strong{font-size:17px}.kd-last small,.kd-empty{font-size:12px;color:#d0ddcb}
 @media(max-width:370px){.kd-grid{gap:6px}.kd-tile{padding:9px 6px 18px;min-height:175px}.kd-icon{font-size:18px}.kd-hero{min-height:205px}}
 @media(min-width:700px){.kd-hero{min-height:340px}.kd-tile{min-height:210px;padding:16px}.kd-footer-photo{height:160px}}
+
+/* V7.3 · Immersive Home Dashboard · real data, no mock statistics */
+body:has(.kd-home){background:radial-gradient(ellipse at 80% 0%,#2d481a88,transparent 65%),#060a08}
+main:has(.kd-home){max-width:1400px;padding-top:0}
+.kd-home{position:relative;isolation:isolate;max-width:1180px;padding:0 0 26px}
+.kd-home::before{content:"";position:absolute;inset:0 -16px auto;min-height:660px;z-index:-2;background:radial-gradient(ellipse at 85% 16%,#8bfa352d,transparent 43%),linear-gradient(135deg,#060b0a,#112015 55%,#070c09);pointer-events:none}
+.kd-hero{min-height:clamp(260px,35vw,450px);border:0;border-radius:0;overflow:visible;align-items:center;background:linear-gradient(90deg,#07100c 0%,#07100cd9 29%,#07100c24 68%),linear-gradient(0deg,#08130e 0%,transparent 42%),url('../titanium-athlete.webp') right center / auto 112% no-repeat;box-shadow:none}
+.kd-hero::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 83% 30%,#a4ff3020,transparent 44%);animation:kd-glow 7s ease-in-out infinite alternate}
+.kd-hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg,transparent,#c7ff3d,transparent);box-shadow:0 0 19px #b8ff36}
+.kd-hero-text{padding:28px clamp(14px,3.5vw,40px);max-width:80%}
+.kd-kicker{font-size:clamp(9px,1.3vw,12px);letter-spacing:.16em;color:#d6e5d2}
+.kd-hero h1{font-size:clamp(43px,7.8vw,104px);line-height:.96;letter-spacing:-.065em;margin:16px 0;text-transform:uppercase;white-space:normal;font-weight:1000;color:#f4f8f5;text-shadow:0 4px 16px #000,0 1px #ffffff60}
+.kd-hero h1 em{color:#bdff39;text-shadow:0 0 25px #a9f52d77}
+.kd-hero p{font-size:clamp(9px,1.35vw,15px);letter-spacing:.15em;color:#edf5e7}.kd-hero p b{color:#baff36;padding:0 3px}
+.kd-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0 0 14px;position:relative;z-index:1}
+.kd-tile{min-height:190px;padding:15px 14px 22px;border-radius:18px;border:1px solid #819479;background:linear-gradient(145deg,#263c2885,#050c0bdf 68%),radial-gradient(circle at 100% 0%,#a7fc321c,transparent 65%);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:inset 0 1px #eaffd62e,0 9px 22px #0009,0 0 12px #9ef63217;transition:transform .2s,box-shadow .2s,border-color .2s}
+.kd-tile:hover{transform:translateY(-3px);border-color:#c3ff55;box-shadow:0 0 20px #a9ff3840,inset 0 1px #ffffff3a}
+.kd-tile.kd-highlight{box-shadow:0 0 20px #b6f4324d,inset 0 0 12px #b6f43217}
+.kd-tile-head{font-size:clamp(11px,1.5vw,17px);min-height:40px;gap:9px}.kd-icon{font-size:clamp(20px,2.8vw,30px);filter:drop-shadow(0 0 5px #a4f83355)}
+.kd-tile-body strong{font-size:clamp(14px,2.3vw,24px)}.kd-tile-body small,.kd-sub{font-size:clamp(10px,1.3vw,13px)}.kd-data-line{font-size:clamp(10px,1.3vw,13px);gap:8px}
+.kd-ring{width:min(95px,100%);box-shadow:0 0 14px #b6f43227}.kd-summary{margin-top:0;background:linear-gradient(120deg,#0e1b10,#060b09);box-shadow:0 0 14px #b6f4322c;border-color:#b6f432}
+.kd-last{background:linear-gradient(110deg,#1a2c19,#0a100e);border-color:#829e5b}.kd-empty{background:#0c160e}
+@keyframes kd-glow{from{opacity:.4}to{opacity:1}}
+@media(max-width:650px){.kd-hero{min-height:300px;background:linear-gradient(90deg,#07100cf5 0%,#07100caa 39%,#07100c10 83%),linear-gradient(0deg,#07100d 0%,transparent 55%),url('../titanium-athlete.webp') 75% center/auto 105% no-repeat}.kd-hero-text{max-width:95%;padding:24px 12px}.kd-hero h1{font-size:clamp(37px,10vw,61px);max-width:88%;line-height:.98}.kd-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.kd-tile{min-height:180px;padding:11px 9px 21px;border-radius:14px}.kd-tile-head{font-size:clamp(10px,2.8vw,13px)}.kd-tile-body strong{font-size:clamp(13px,3.6vw,18px)}.kd-tile-body small,.kd-sub{font-size:clamp(9px,2.45vw,12px)}.kd-data-line{font-size:10px}.kd-summary small{font-size:8px}}
+@media(max-width:370px){.kd-hero{min-height:260px}.kd-hero h1{font-size:37px}.kd-tile{min-height:176px}}
+html[data-motion=reduced] .kd-hero::before{animation:none}@media(prefers-reduced-motion:reduce){.kd-hero::before{animation:none}.kd-tile{transition:none}}
