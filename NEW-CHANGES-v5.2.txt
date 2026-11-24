@@ -1,8 +1,0 @@
-KILLA FITNESS v5.2 — ILLUSTRATED GENERATOR
-- The generator now previews matching exercise illustrations before building a workout.
-- All 29 built-in generator exercises have matching prepackaged 3D-style WebP exercise renders.
-- Generator preview filters by muscle group and available equipment.
-- If an illustration fails to load, a clear fallback appears instead of a broken image.
-- Existing v5.1 features, workout data keys, backup, offline assets and metallic navigation retained.
-- These are 3D-style rendered images, not rotatable real-time 3D mesh models.
-- Backup your workout data before uploading. Test on a phone before using during a workout.

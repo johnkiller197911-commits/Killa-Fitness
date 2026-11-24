@@ -1,1 +1,0 @@
-Versioned CSS and scripts; matching offline cache URLs; legacy entry redirects to current app. Existing training engine and storage retained. Extract all files before opening index.html.

@@ -1,9 +1,0 @@
-V7.0 SMART TRAINING ENGINE
-- New session builder: Chest, Arms, Back, Shoulders, Legs, Core
-- Selectable 30/45/60/75/90-minute sessions and daily effort
-- Structured exercise slots with equipment variation and substitute controls
-- Smart Mix: straight sets, drop sets, supersets and optional giant-set finisher
-- Workout preview and start directly into existing live set logger
-- Existing add-set, exercise substitution, coach, rest timer, history and local storage retained
-- Existing 45 static exercise illustrations retained (these are not rotatable 3D models)
-- Note: advanced method guidance is informational; grouped set tracking remains a future enhancement

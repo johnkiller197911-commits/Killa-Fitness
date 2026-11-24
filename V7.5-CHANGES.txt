@@ -1,7 +1,0 @@
-V7.5 Intelligent Training
-- Guided equal-round circuits when suitable.
-- Optional logged drop and rest-pause finishers.
-- Pause/resume session clock; pauses when hidden or leaving workout.
-- Load increase gated by upper rep target.
-- Existing storage and dashboard retained.
-- Browser/device testing pending.
