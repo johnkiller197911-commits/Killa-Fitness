@@ -1,9 +1,9 @@
 {
-  "version": "9.0.5",
-  "build": 905,
+  "version": "9.5.1",
+  "build": 951,
   "notes": [
-    "Remember Remind Me Later across ordinary in-app refreshes",
-    "Improve downward pull-to-refresh prevention",
-    "No workout or program changes"
+    "V9.5.1 update-system release",
+    "Preserves swipe-to-refresh protection",
+    "No workout, program or history data changes"
   ]
 }

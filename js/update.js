@@ -1,5 +1,5 @@
 (()=>{'use strict';
-const VERSION='9.0.5',BUILD=905,CHECK_MS=3*60*1000;
+const VERSION='9.5.1',BUILD=951,CHECK_MS=3*60*1000;
 let checking=false,installing=false,remindUntil=Number(sessionStorage.getItem('killa-update-remind-until'))||0,pending=null,registration=null;
 const activeWorkout=()=>Boolean(typeof state!=='undefined'&&state.draft);
 const dialogOpen=()=>!!document.getElementById('killa-update');
