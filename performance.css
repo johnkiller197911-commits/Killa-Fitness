@@ -217,3 +217,5 @@
 .tx-welcome{background-position:center,center 30%;min-height:240px}.tx-home-panel{padding:14px}.tx-muscle-tile{min-height:105px}.tx-muscle-tile img{height:86px}.tx-home{padding-bottom:20px}
 @media(max-width:700px){.tx-home-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.tx-muscle-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.tx-home{gap:11px}.tx-week-row{flex-direction:column;align-items:center}.tx-progress-ring{max-width:none;width:116px}.tx-week-metrics{width:100%}.tx-week-metrics>div{padding:6px 0}.tx-activity{flex-direction:column}.tx-muscle-visual{width:100%;max-width:170px}.tx-activity-list{width:100%}.tx-section-head h2{font-size:13px}.tx-home-panel{padding:12px}.tx-last{align-items:flex-start;flex-direction:column}.tx-last>span{text-align:left}.tx-welcome-shade{max-width:73%}}
 @media(max-width:390px){.tx-home-grid{grid-template-columns:1fr}.tx-week-row{flex-direction:row}.tx-progress-ring{width:115px}.tx-activity{flex-direction:row}.tx-muscle-visual{width:48%}}
+
+.v75-panel{display:grid;gap:8px;padding:12px;margin:10px 0;border:1px solid #718b38;border-radius:12px;background:#182219;color:#e8f2e1}.v75-panel b{color:#baff36}
