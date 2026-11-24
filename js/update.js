@@ -1,1 +1,76 @@
-(()=>{'use strict';const BUILD=903,VERSION='9.0.3';let checking=false,applying=false,remind=0,reg=null;const busy=()=>!!state.draft||!!deadline||!!alarming;function notice(v){if(document.getElementById('killa-update'))return;const d=document.createElement('dialog');d.id='killa-update';d.style.cssText='max-width:420px;width:90%;background:#101713;color:#fff;border:1px solid #86e535;border-radius:16px;padding:24px';const h=document.createElement('h2');h.textContent='KILLA FITNESS • UPDATE AVAILABLE';h.style.color='#86e535';d.append(h);const p=document.createElement('p');p.textContent='V'+VERSION+' → V'+v.version;d.append(p);const list=document.createElement('ul');for(const n of (Array.isArray(v.notes)?v.notes:[])){const li=document.createElement('li');li.textContent=String(n);list.append(li)}d.append(list);const msg=document.createElement('p');msg.textContent='Your saved workout history and settings are retained.';d.append(msg);const b=document.createElement('button');b.textContent='UPDATE NOW';b.style.cssText='background:#86e535;color:#101710;padding:14px;width:100%;font-weight:bold;border:0;border-radius:8px';d.append(b);const later=document.createElement('button');later.textContent='Remind me later';later.style.cssText='margin-top:12px;width:100%;padding:10px';d.append(later);const close=()=>{remind=Date.now()+15*60000;d.close();d.remove()};later.onclick=close;d.addEventListener('cancel',e=>{e.preventDefault();close()});b.onclick=async()=>{if(busy()){msg.textContent='Finish your active workout before updating.';return}b.disabled=true;msg.textContent='Preparing update…';try{await reg.update();if(!reg.waiting&&reg.installing){const w=reg.installing;await new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('Update timed out')),45000);const check=()=>{if(w.state==='installed'||w.state==='activated'){clearTimeout(timer);resolve()}else if(w.state==='redundant'){clearTimeout(timer);reject(Error('Download failed'))}};w.addEventListener('statechange',check);check()})}if(!reg.waiting)throw Error('Update not ready yet. Try again shortly.');if(busy())throw Error('Finish your workout first.');save();applying=true;reg.waiting.postMessage({type:'SKIP_WAITING'});msg.textContent='Restarting…';setTimeout(()=>{if(applying){applying=false;b.disabled=false;msg.textContent='Update activation timed out. Try again.'}},30000)}catch(e){applying=false;b.disabled=false;msg.textContent=e.message}};document.body.append(d);d.showModal()}navigator.serviceWorker?.addEventListener('controllerchange',()=>{if(applying){applying=false;location.reload()}});async function check(manual=false){if(checking||applying)return;if(!manual&&(busy()||Date.now()<remind||document.hidden))return;checking=true;try{if(!navigator.onLine)throw Error('Offline. Connect to check for updates.');reg=await navigator.serviceWorker.getRegistration();if(!reg)throw Error('Update service not ready. Try again shortly.');const r=await fetch('./version.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('Update server unavailable');const v=await r.json();if(Number(v.build)>BUILD){if(busy()){if(manual)alert('Update available. Finish your workout first.');return}notice(v)}else if(manual)alert('KILLA FITNESS V'+VERSION+' is up to date.')}catch(e){if(manual)alert(e.message)}finally{checking=false}}window.killaCheckUpdate=check;setTimeout(()=>check(),4000);setInterval(()=>check(),900000);window.addEventListener('online',()=>check());document.addEventListener('visibilitychange',()=>{if(!document.hidden)check()})})();
+(()=>{'use strict';
+const VERSION='9.0.4',BUILD=904,CHECK_MS=3*60*1000;
+let checking=false,installing=false,remindUntil=0,pending=null,registration=null;
+const activeWorkout=()=>Boolean(typeof state!=='undefined'&&state.draft);
+const dialogOpen=()=>!!document.getElementById('killa-update');
+function showUpdate(release){
+  pending=release;
+  if(activeWorkout()||dialogOpen()||Date.now()<remindUntil)return;
+  const dialog=document.createElement('dialog');dialog.id='killa-update';
+  dialog.style.cssText='max-width:420px;width:min(90vw,420px);background:#101713;color:#fff;border:1px solid #86e535;border-radius:16px;padding:24px;box-shadow:0 20px 80px #000b';
+  const heading=document.createElement('h2');heading.textContent='KILLA FITNESS · UPDATE AVAILABLE';heading.style.color='#86e535';dialog.append(heading);
+  const version=document.createElement('p');version.textContent='Installed V'+VERSION+'  →  Available V'+release.version;dialog.append(version);
+  const notes=document.createElement('ul');
+  for(const n of (Array.isArray(release.notes)?release.notes:[]).slice(0,8)){const item=document.createElement('li');item.textContent=String(n);notes.append(item)}dialog.append(notes);
+  const status=document.createElement('p');status.textContent='Your workout history and settings will stay on this device.';dialog.append(status);
+  const update=document.createElement('button');update.type='button';update.textContent='UPDATE NOW';update.style.cssText='display:block;width:100%;padding:14px;border:0;border-radius:8px;background:#86e535;color:#101710;font-weight:800';dialog.append(update);
+  const later=document.createElement('button');later.type='button';later.textContent='REMIND ME LATER';later.style.cssText='display:block;width:100%;padding:12px;margin-top:10px';dialog.append(later);
+  function dismiss(){remindUntil=Date.now()+15*60*1000;dialog.close();dialog.remove()}
+  later.onclick=dismiss;dialog.addEventListener('cancel',e=>{e.preventDefault();dismiss()});
+  update.onclick=async()=>{
+    if(activeWorkout()){status.textContent='Finish your active workout before updating.';return}
+    update.disabled=true;status.textContent='Downloading and preparing the update…';
+    try{
+      registration=registration||await navigator.serviceWorker.getRegistration();
+      if(!registration)throw Error('Update service is unavailable.');
+      await registration.update();
+      let worker=registration.waiting;
+      if(!worker&&registration.installing){
+        worker=registration.installing;
+        await new Promise((resolve,reject)=>{
+          const timeout=setTimeout(()=>reject(Error('Download timed out. Please retry.')),45000);
+          const onState=()=>{if(worker.state==='installed'){clearTimeout(timeout);resolve()}else if(worker.state==='redundant'){clearTimeout(timeout);reject(Error('Update could not be installed.'))}};
+          worker.addEventListener('statechange',onState);onState()
+        });
+      }
+      worker=registration.waiting;
+      if(!worker)throw Error('The update is still preparing. Try again shortly.');
+      if(activeWorkout())throw Error('Finish your active workout before updating.');
+      installing=true;
+      const timeout=setTimeout(()=>{if(installing){installing=false;update.disabled=false;status.textContent='Activation timed out. Please try again.'}},30000);
+      window.__killaUpdateTimeout=timeout;
+      worker.postMessage({type:'SKIP_WAITING'});
+      status.textContent='Installing update…';
+    }catch(err){installing=false;update.disabled=false;status.textContent=err.message||'Could not update; try again.'}
+  };
+  document.body.append(dialog);dialog.showModal();
+}
+navigator.serviceWorker?.addEventListener('controllerchange',()=>{
+  if(installing){clearTimeout(window.__killaUpdateTimeout);installing=false;window.location.reload()}
+});
+async function check(manual=false){
+  if(checking||installing||document.visibilityState==='hidden')return;
+  checking=true;
+  try{
+    if(!navigator.onLine)throw Error('You are offline.');
+    const url=new URL('version.json',document.baseURI);url.searchParams.set('check',String(Date.now()));
+    const response=await fetch(url,{cache:'no-store',headers:{'Cache-Control':'no-cache'}});
+    if(!response.ok)throw Error('Update check failed ('+response.status+').');
+    const release=await response.json();
+    if(!Number.isSafeInteger(release.build)||typeof release.version!=='string')throw Error('Invalid update information.');
+    if(release.build>BUILD){
+      registration=await navigator.serviceWorker.getRegistration();
+      if(!registration)throw Error('Update service is not ready.');
+      pending=release;
+      if(activeWorkout()){
+        if(manual)alert('V'+release.version+' is available. Finish your workout first.');
+      }else if(manual||Date.now()>remindUntil)showUpdate(release);
+    }else{pending=null;if(manual)alert('KILLA FITNESS V'+VERSION+' is up to date.')}
+  }catch(err){if(manual)alert(err.message||'Unable to check updates.')}finally{checking=false}
+}
+window.killaCheckUpdate=check;
+setTimeout(()=>check(),2500);
+setInterval(()=>{if(pending&&!activeWorkout()&&Date.now()>remindUntil)showUpdate(pending);check()},CHECK_MS);
+window.addEventListener('online',()=>check());
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)check()});
+})();
