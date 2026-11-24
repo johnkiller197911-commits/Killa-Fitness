@@ -1,7 +1,7 @@
 {
   "name": "KILLA FITNESS V9.0.2 Elite Coach",
   "short_name": "KILLA FITNESS",
-  "start_url": "/Killa-Fitness/?v=902#home",
+  "start_url": "/Killa-Fitness/",
   "scope": "/Killa-Fitness/",
   "display": "standalone",
   "background_color": "#050807",
