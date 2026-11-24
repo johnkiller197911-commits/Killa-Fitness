@@ -1,0 +1,1 @@
+V9.0: responsive dashboard, upper-body session selection, history-based next group, substitution load reset, version and cache updates. Existing storage key retained.
