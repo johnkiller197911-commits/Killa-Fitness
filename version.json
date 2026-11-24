@@ -1,9 +1,9 @@
 {
-  "version": "9.5.1",
-  "build": 951,
+  "version": "9.5.2",
+  "build": 952,
   "notes": [
-    "V9.5.1 update-system release",
-    "Preserves swipe-to-refresh protection",
-    "No workout, program or history data changes"
+    "Quick in-app updater verification release",
+    "Same workout features and swipe-refresh behaviour as V9.5.1",
+    "Workout history and settings remain on your device"
   ]
 }
