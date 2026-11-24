@@ -1,0 +1,9 @@
+{
+  "version": "9.0.2",
+  "build": 902,
+  "notes": [
+    "Automatic update checks",
+    "Workout-safe update approval",
+    "Improved cache refresh"
+  ]
+}
