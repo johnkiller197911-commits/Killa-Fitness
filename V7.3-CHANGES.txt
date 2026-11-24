@@ -1,0 +1,11 @@
+KILLA FITNESS V7.3 — REFINED WELCOME DASHBOARD
+
+- Six individual muscle-group buttons beneath Welcome Back.
+- Compact two-column progress panels on most phones.
+- Real logged-set anatomy highlights on the Home muscle map.
+- Last completed workout explicitly shown as history, not a combined-split recommendation.
+- Visible V7.3 marker to confirm the new app files have loaded.
+- Updated manifest and cache identifier.
+- Preserves existing localStorage workout data and history.
+
+DEPLOYMENT: Extract this ZIP and upload ALL files and folders to the ROOT of the GitHub Pages repository. Do not upload the ZIP itself. Wait for the Pages deployment to finish. If V7.3 marker is missing, the new files have not been loaded.

@@ -1,0 +1,1 @@
+V7.4: intensity and duration now change planned working sets. Mode and readiness selectors synchronized. Optional advanced technique guidance only; no automatic circuit tracking. Existing storage key retained.
