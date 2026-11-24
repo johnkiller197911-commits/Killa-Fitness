@@ -1,6 +1,6 @@
 (()=>{'use strict';
-const VERSION='9.0.4',BUILD=904,CHECK_MS=3*60*1000;
-let checking=false,installing=false,remindUntil=0,pending=null,registration=null;
+const VERSION='9.0.5',BUILD=905,CHECK_MS=3*60*1000;
+let checking=false,installing=false,remindUntil=Number(sessionStorage.getItem('killa-update-remind-until'))||0,pending=null,registration=null;
 const activeWorkout=()=>Boolean(typeof state!=='undefined'&&state.draft);
 const dialogOpen=()=>!!document.getElementById('killa-update');
 function showUpdate(release){
@@ -15,7 +15,7 @@ function showUpdate(release){
   const status=document.createElement('p');status.textContent='Your workout history and settings will stay on this device.';dialog.append(status);
   const update=document.createElement('button');update.type='button';update.textContent='UPDATE NOW';update.style.cssText='display:block;width:100%;padding:14px;border:0;border-radius:8px;background:#86e535;color:#101710;font-weight:800';dialog.append(update);
   const later=document.createElement('button');later.type='button';later.textContent='REMIND ME LATER';later.style.cssText='display:block;width:100%;padding:12px;margin-top:10px';dialog.append(later);
-  function dismiss(){remindUntil=Date.now()+15*60*1000;dialog.close();dialog.remove()}
+  function dismiss(){remindUntil=Date.now()+15*60*1000;sessionStorage.setItem('killa-update-remind-until',String(remindUntil));dialog.close();dialog.remove()}
   later.onclick=dismiss;dialog.addEventListener('cancel',e=>{e.preventDefault();dismiss()});
   update.onclick=async()=>{
     if(activeWorkout()){status.textContent='Finish your active workout before updating.';return}
@@ -68,6 +68,27 @@ async function check(manual=false){
     }else{pending=null;if(manual)alert('KILLA FITNESS V'+VERSION+' is up to date.')}
   }catch(err){if(manual)alert(err.message||'Unable to check updates.')}finally{checking=false}
 }
+
+// Prevent Chrome/Samsung Internet pull-to-refresh when this standalone PWA is scrolled to the top.
+// Preserve normal downward scrolling, form controls, and ordinary touch gestures.
+(()=>{let startY=0,startX=0;
+document.addEventListener('touchstart',e=>{if(e.touches.length!==1)return;startY=e.touches[0].clientY;startX=e.touches[0].clientX},{passive:true});
+document.addEventListener('touchmove',e=>{
+ if(e.touches.length!==1||!e.cancelable)return;
+ const t=e.target;
+ if(t.closest('input,textarea,select,[contenteditable="true"]'))return;
+ const dy=e.touches[0].clientY-startY,dx=e.touches[0].clientX-startX;
+ if(dy<8||Math.abs(dy)<Math.abs(dx))return;
+ let node=t;while(node&&node!==document.documentElement){
+   if(node.scrollHeight>node.clientHeight+1 && getComputedStyle(node).overflowY!=='visible'){
+      if(node.scrollTop>0)return;
+   }
+   node=node.parentElement;
+ }
+ if(window.scrollY<=0)e.preventDefault();
+},{passive:false});
+})();
+
 window.killaCheckUpdate=check;
 setTimeout(()=>check(),2500);
 setInterval(()=>{if(pending&&!activeWorkout()&&Date.now()>remindUntil)showUpdate(pending);check()},CHECK_MS);

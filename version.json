@@ -1,10 +1,9 @@
 {
-  "version": "9.0.4",
-  "build": 904,
+  "version": "9.0.5",
+  "build": 905,
   "notes": [
-    "Automatic update notification and approval",
-    "Pull-to-refresh disabled in supported Android browsers",
-    "Current version stays loaded until you approve an update",
-    "Workout history and programs remain unchanged"
+    "Remember Remind Me Later across ordinary in-app refreshes",
+    "Improve downward pull-to-refresh prevention",
+    "No workout or program changes"
   ]
 }
