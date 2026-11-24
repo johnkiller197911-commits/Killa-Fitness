@@ -1,8 +1,8 @@
 {
   "name": "KILLA FITNESS V9.0 Elite Coach",
   "short_name": "KILLA FITNESS",
-  "start_url": "./index.html",
-  "scope": "./",
+  "start_url": "/Killa-Fitness/?v=901#home",
+  "scope": "/Killa-Fitness/",
   "display": "standalone",
   "background_color": "#050807",
   "theme_color": "#050807",
@@ -27,7 +27,7 @@
     }
   ],
   "id": "./",
-  "description": "KILLA FITNESS \u2014 metallic green workout tracker, exercise library, and training progress.",
+  "description": "KILLA FITNESS — metallic green workout tracker, exercise library, and training progress.",
   "display_override": [
     "standalone",
     "minimal-ui"
