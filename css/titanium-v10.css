@@ -1,0 +1,45 @@
+
+/* KILLA FITNESS V10.0 / TITANIUM ELITE — presentation only */
+:root{--lime:#acff24!important;--v10-electric:#abff24}
+html,body{background:#050807!important;color:#edf6e9}
+body{background-image:radial-gradient(ellipse at 80% 0%,#85cc1323,transparent 46%),repeating-linear-gradient(135deg,#ffffff02 0,#ffffff02 1px,transparent 1px,transparent 6px)!important}
+.brand-header{background:linear-gradient(180deg,#121c12,#030704)!important;box-shadow:0 6px 24px #000c,0 0 20px #91ff2026;border-bottom:1px solid #7bc02a!important;backdrop-filter:blur(18px)}
+.brand-header img{filter:drop-shadow(0 0 8px #9fff2565)}
+#nav{background:linear-gradient(180deg,#121b14f8,#050806f8)!important;border:1px solid #54733a!important;border-radius:17px!important;box-shadow:0 -6px 35px #000b,0 0 16px #a1ff211a!important;backdrop-filter:blur(18px)}
+#nav button.active{border-radius:11px!important;border:1px solid #abff24!important;background:linear-gradient(160deg,#243b17,#071008)!important;box-shadow:0 0 18px #91f31360,inset 0 1px 0 #d5ff5172!important}
+#nav button.active .nav-glyph,#nav button.active .nav-name{color:#adff28!important}
+.v10-home{gap:13px}
+.v10-home .tx-welcome{min-height:365px;background-image:linear-gradient(90deg,#020504e8 0%,#040804b2 42%,#02050217 100%),linear-gradient(0deg,#020602ad,transparent 45%),url('../hero-athlete.jpg')!important;background-size:cover!important;background-position:center 37%!important;border:1px solid #8bd332!important;border-radius:19px!important;box-shadow:0 16px 35px #000b,inset 0 0 42px #0006,0 0 20px #9df72b24!important;position:relative;overflow:hidden}
+.v10-home .tx-welcome:after{content:"";position:absolute;bottom:0;left:10%;right:10%;height:3px;background:linear-gradient(90deg,transparent,#abff24,transparent);box-shadow:0 0 17px #a8ff22}
+.v10-home .tx-welcome-shade{max-width:83%;min-height:365px;display:flex;flex-direction:column;justify-content:flex-end;padding:26px!important}
+.v10-home .tx-welcome h1{font-weight:1000!important;font-style:italic!important;font-size:clamp(44px,7.4vw,81px)!important;line-height:.89!important;letter-spacing:-.05em!important;text-shadow:0 6px 24px #000e}
+.v10-home .tx-welcome h1 em{color:#b0ff30;text-shadow:0 0 18px #99ff2345}
+.v10-home .tx-overline{font-size:10px!important;letter-spacing:.23em!important;font-weight:900;color:#bcff57!important}
+.v10-home .tx-welcome p{letter-spacing:.14em;font-size:11px;font-weight:800;color:#d6e6d0}
+.v10-home .tx-build-label{background:#0a130be6;border:1px solid #abff2690;border-radius:6px;padding:7px 9px;color:#beff47;font-size:10px;letter-spacing:.09em}
+.v10-home .v8-metrics{gap:8px!important}
+.v10-home .v8-metrics>div,.v10-home .tx-home-panel,.v10-train .tx-feature,.v10-train .tx-quick-grid button{background:linear-gradient(150deg,#20301f,#0c140e 30%,#060a07)!important;border:1px solid #668c46!important;border-radius:14px!important;box-shadow:inset 0 1px 0 #ffffff1a,0 10px 28px #0008!important}
+.v10-home .v8-metrics>div{padding:15px 12px!important;min-height:94px}
+.v10-home .v8-metrics>div b{color:#b9ff3c!important;font-style:italic;font-size:clamp(25px,3vw,38px)}
+.v10-home .v8-metrics>div small{letter-spacing:.1em;font-size:10px}
+.v10-home .v8-recommend{border-color:#a8ff34!important;box-shadow:0 0 24px #90f71f28,inset 0 1px 0 #ffffff24!important;min-height:225px;overflow:hidden}
+.v10-home .v8-recommend h2{font-size:clamp(31px,5vw,54px)!important;line-height:.9;font-weight:1000;letter-spacing:-.04em}
+.v10-home .v8-recommend button,.v10-train .primary,.v10-train .tx-feature button{min-height:46px;border:1px solid #d1ff6a!important;border-radius:10px!important;background:linear-gradient(170deg,#c5ff48,#83df06)!important;color:#0a1405!important;font-weight:1000!important;box-shadow:0 0 19px #a2ff2770!important}
+.v10-home .v8-rec-image{background:radial-gradient(ellipse at center,#315521,#091209 72%);min-height:180px}
+.v10-home .v8-rec-image img{height:100%;object-fit:cover;mix-blend-mode:screen;max-height:270px}
+.v10-home .tx-section-head h2{font-size:15px;font-weight:1000;font-style:italic;letter-spacing:.04em}
+.v10-home .tx-muscle-tile{border:1px solid #6e9c43!important;border-radius:13px!important;background:linear-gradient(150deg,#1a2b18,#060c07)!important;box-shadow:inset 0 1px 0 #ffffff12}
+.v10-home .tx-muscle-tile:hover{box-shadow:0 0 17px #b2ff254a}
+.v10-home .tx-muscle-tile:has(img[src*="leg-press"]),.v10-home .tx-muscle-tile:has(img[src*="cable-crunch"]){display:none!important}
+.v10-home .tx-muscle-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+.v10-home .tx-progress-ring{box-shadow:0 0 23px #a4ff242c}
+.v10-home .tx-muscle-visual img{filter:drop-shadow(0 0 9px #91ff1a36)}
+.v10-home .tx-coach-card{border-color:#b8ff46!important}
+.v10-train .tx-eyebrow{color:#b5ff42;font-weight:900;letter-spacing:.18em}
+.v10-train h1{font-size:clamp(34px,7vw,61px)!important;font-weight:1000;font-style:italic;letter-spacing:-.05em;line-height:.94}
+.v10-train .tx-feature{overflow:hidden;border-color:#aaff40!important;min-height:270px!important}
+.v10-train .tx-feature img{max-height:300px!important;object-fit:cover;mix-blend-mode:screen}
+.v10-train .tx-feature h2{font-size:clamp(26px,4.3vw,44px)!important;font-style:italic}
+.v10-strap{border:1px solid #5e9140;border-radius:12px;background:linear-gradient(115deg,#172519,#070d08);padding:12px 14px;color:#baff37;font-size:11px;letter-spacing:.12em;font-weight:900;box-shadow:0 0 16px #a0fa171a}
+@media(max-width:700px){.v10-home .tx-welcome,.v10-home .tx-welcome-shade{min-height:295px!important}.v10-home .tx-welcome-shade{padding:19px!important}.v10-home .tx-welcome h1{font-size:clamp(40px,9vw,65px)!important}.v10-home .v8-metrics{grid-template-columns:repeat(2,minmax(0,1fr))!important}.v10-home .v8-metrics>div{min-height:82px;padding:12px!important}.v10-home .tx-muscle-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.v10-home .v8-recommend{grid-template-columns:36% 1fr!important;min-height:190px!important}.v10-home .v8-recommend h2{font-size:28px!important}}
+@media(prefers-reduced-motion:no-preference){.v10-home .tx-home-panel,.v10-home .v8-metrics>div{animation:v10in .35s ease both}@keyframes v10in{from{opacity:.7;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}}

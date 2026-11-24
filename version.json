@@ -1,9 +1,9 @@
 {
-  "version": "9.5.2",
-  "build": 952,
+  "version": "10.0.0",
+  "build": 1000,
   "notes": [
-    "Quick in-app updater verification release",
-    "Same workout features and swipe-refresh behaviour as V9.5.1",
-    "Workout history and settings remain on your device"
+    "Titanium Elite visual redesign of Home and Train",
+    "Updated cinematic dark-green styling and focused training UI",
+    "Workout engine and personal records unchanged"
   ]
 }
