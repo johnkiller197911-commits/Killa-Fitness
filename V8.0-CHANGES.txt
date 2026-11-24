@@ -1,0 +1,1 @@
+V8.0 Titanium X — responsive dashboard, live history metrics, suggested session, refined exercise rotation. Existing V7.5 engine and storage retained. Readiness is a suggestion, not measured recovery.
