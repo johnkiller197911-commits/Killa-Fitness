@@ -1,9 +1,9 @@
 {
-  "version": "9.0.2",
-  "build": 902,
+  "version": "9.0.3",
+  "build": 903,
   "notes": [
-    "Automatic update checks",
-    "Workout-safe update approval",
-    "Improved cache refresh"
+    "Small V9.0.3 badge in the app header",
+    "Test of automatic update detection and installation",
+    "No changes to workout data or programs"
   ]
 }
